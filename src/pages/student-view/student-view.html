@@ -1,0 +1,81 @@
+<!--
+  Generated template for the StudentViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+    <button *ngIf="!toggled" ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>{{selectedStudent.Name}}</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list inset no-lines>
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Rec ID</ion-list-header>
+    <ion-item>{{selectedStudent.RecId}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Name</ion-list-header>
+    <ion-item>{{selectedStudent.Name}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Student ID</ion-list-header>
+    <ion-item>{{selectedStudent.StudentId}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>IC Number</ion-list-header>
+    <ion-item>{{selectedStudent.IdentityNumber}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Email</ion-list-header>
+    <ion-item>{{selectedStudent.Email}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Phone</ion-list-header>
+    <ion-item>{{selectedStudent.Phone}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Mobile Phone</ion-list-header>
+    <ion-item>{{selectedStudent.MobilePhone}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Address 1</ion-list-header>
+    <ion-item>{{selectedStudent.Address1}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Address 2</ion-list-header>
+    <ion-item>{{selectedStudent.Address2}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Zip Code</ion-list-header>
+    <ion-item>{{selectedStudent.ZipCode}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>City</ion-list-header>
+    <ion-item>{{selectedStudent.City}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>State</ion-list-header>
+    <ion-item>{{selectedStudent.State}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Data Area ID</ion-list-header>
+    <ion-item>{{selectedStudent.DataAreaId}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Status</ion-list-header>
+    <ion-item>{{selectedStudent.Status}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Created By</ion-list-header>
+    <ion-item>{{selectedStudent.CreatedBy}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Created Date Tme</ion-list-header>
+    <ion-item>{{selectedStudent.CreatedDateTime}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Modified By</ion-list-header>
+    <ion-item>{{selectedStudent.ModifiedBy}}</ion-item>
+
+    <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;" color="primary" no-lines>Modified Date Time</ion-list-header>
+    <ion-item>{{selectedStudent.ModifiedDateTime}}</ion-item>
+
+  </ion-list>
+
+</ion-content>

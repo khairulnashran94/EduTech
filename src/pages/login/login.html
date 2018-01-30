@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding-right>
+  <ion-item>
+    <ion-label color="primary" floating>Username</ion-label>
+    <ion-input type="email" clearInput></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Password</ion-label>
+    <ion-input type="password" clearInput></ion-input>
+  </ion-item>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <button ion-button round align-items-end (click)=loginAction()>Login</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

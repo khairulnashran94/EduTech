@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- Get the title from previous page -->
+    <ion-row>
+
+      <ion-title text-center>{{selectedActivity.title}}</ion-title>
+
+      <ion-col justify-content-end>
+        <!-- Favourite Heart Icon -->
+        <ion-buttons end>
+          <button ion-button icon-only (click)="favourite()">
+            <!-- For toggle, use below comment -->
+            <!-- <ion-icon [name]="visible ? 'heart-outline' : 'heart'" ></ion-icon> -->
+            <ion-icon name="heart-outline" *ngIf="visible"></ion-icon>
+            <ion-icon name="heart" *ngIf="!visible" style="color:red"></ion-icon>
+          </button>
+
+          <!-- Add to wishlist icon -->
+          <button ion-button icon-only (click)="wishlist()">
+            <ion-icon name="add-circle"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-col>
+
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-card>
+    <img width="100%" maxheight="200px" src="{{selectedActivity.image}}" padding-horizontal>
+
+    <!-- Need to get more information regarding the event and format accordinly inside this page -->
+
+    <ion-list no-lines inset>
+      <ion-list-header style="border-top:0px; background-color:lightgrey;color:black;margin-bottom:0px;">
+        Event Name
+      </ion-list-header>
+      <ion-item text-wrap>Jogging</ion-item>
+
+      <ion-list-header style="border-top:0px;background-color:lightgrey;color:black;margin-bottom:0px;">
+        Vanue
+      </ion-list-header>
+      <ion-item text-wrap>Setia Alam</ion-item>
+
+      <ion-list-header style="border-top:0px;background-color:lightgrey;color:black; margin-bottom:0px;">
+        Time Slots
+      </ion-list-header>
+      <ion-item text-wrap> 10PM</ion-item>
+
+      <ion-list-header style="border-top:0px;background-color:lightgrey;color:black;margin-bottom:0px;">
+        Tutor Name
+      </ion-list-header>
+      <ion-item text-wrap>Unknown</ion-item>
+
+      <ion-list-header style="border-top:0px;background-color:lightgrey;color:black;margin-bottom:0px;">
+        # of Participants
+      </ion-list-header>
+      <ion-item text-wrap>100 Students per Class</ion-item>
+
+      <ion-list-header style="border-top:0px;background-color:lightgrey;color:black;margin-bottom:0px;">
+        Price Per Slot
+      </ion-list-header>
+      <ion-item text-wrap>RM 100.00</ion-item>
+
+
+    </ion-list>
+
+
+    <!-- Join button -->
+    <ion-row justify-content-center padding-bottom>
+      <button ion-button outline primary>JOIN</button>
+    </ion-row>
+
+  </ion-card>
+
+
+</ion-content>
+ion-plus-round

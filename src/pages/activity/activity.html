@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <button *ngIf="!toggled" ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- Title -->
+    <ion-title *ngIf="!toggled">Activity</ion-title>
+    <!-- Search Bar -->
+    <ion-searchbar #searchbar *ngIf="toggled" 
+                              [showCancelButton]="true" 
+                              (ionCancel)="toggleSearch($event)"
+                              (ionInput)="searchActivities($event)" 
+                              (focusout)="null" 
+                              placeholder="Search activity name">
+    </ion-searchbar>
+    <!-- Search Icon -->
+    <ion-buttons end *ngIf="!toggled">
+      <button ion-button icon-only (click)="toggleSearch($event)">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end *ngIf="!toggled">
+      <button ion-button icon-only (click)="sortAlert()">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<!-- Image is clickable along with the 'Learn More' button navigate to the activity information. -->
+<ion-content>
+
+  <!-- Fab for scroll to top page -->
+  <ion-fab right bottom *ngIf="showButton">
+    <button ion-fab (click)="scrollToTop()">
+      <ion-icon name="arrow-dropup-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+
+
+
+  <!-- Other content cards -->
+  <ion-card *ngFor="let activity of activities">
+    <ion-card-content>
+      <img src={{activity.image}} style="object-fit:cover;cursor:pointer;" (click)="viewActivity(activity)">
+
+      <ion-card-title>
+        {{activity.title}}
+      </ion-card-title>
+
+      <p>
+        {{activity.description}}
+      </p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-10>
+            <button ion-button clear full (click)="viewActivity(activity)" justify-content-center>Learn More</button>
+          </ion-col>
+          <ion-col col-2>
+            <ion-buttons end>
+              <button ion-button clear icon-only (click)="favourite()">
+                <!-- For toggle, use below comment -->
+                <!-- <ion-icon [name]="visible ? 'heart-outline' : 'heart'" ></ion-icon> -->
+                <ion-icon name="heart-outline" *ngIf="visible"></ion-icon>
+                <ion-icon name="heart" *ngIf="!visible" style="color:red"></ion-icon>
+              </button>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
